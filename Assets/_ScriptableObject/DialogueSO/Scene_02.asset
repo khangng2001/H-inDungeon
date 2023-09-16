@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e4587c194c34c4fbd5e5a55b1b393e, type: 3}
+  m_Name: Scene_02
+  m_EditorClassIdentifier: 
+  type: 0
+  name: Dwarf
+  face: {fileID: 21300000, guid: e99fbbf3494818c48ae56b8c2da2c28c, type: 3}
+  sentences:
+  - Oh! Glad to see you here again.
+  - I think i should give thou  a hand in your searching. But I am not a truly fighter
+    so I cannot fight along side with you.
+  - Yet  i bielive that every man gotta eat right? i am hither  for that
+  - Towards the way going down hither , thy can obtain several ingridients from those
+    foes
+  - Towards the way going down hither , thy can obtain several ingridients from those
+    foes
+  - 'Using ingredients to cook a meal via this campfire and then eat ''em to heal
+    thy energy yet  remember those ingredients shall be dropped if thou are died,
+    so keep care mate. '
+  - Oh,  yet thou canst not cook a meet meal without a recipe, right? fine I shall
+    grant thou one
+  - I shall aye keep  'i  this campfire to grant thou newer recipe, so be safe my
+    mate.

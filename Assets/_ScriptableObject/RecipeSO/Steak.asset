@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 358f41ef66b9a0a4cbbe014af6fc6246, type: 3}
+  m_Name: Steak
+  m_EditorClassIdentifier: 
+  <RecipeImage>k__BackingField: {fileID: 21300000, guid: 8d74461f26e326d498c5e37aa2e46efb, type: 3}
+  <Title>k__BackingField: Steak
+  <Benefit>k__BackingField: "Gain 25 Health, \n5 Stamina"
+  <Ingredient>k__BackingField: 'Ingredient
+
+    Egg x1
+
+    Onion x1
+
+    Beef x1'

@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77e4587c194c34c4fbd5e5a55b1b393e, type: 3}
+  m_Name: Scene_01
+  m_EditorClassIdentifier: 
+  type: 0
+  name: Dwarf
+  face: {fileID: 21300000, guid: e99fbbf3494818c48ae56b8c2da2c28c, type: 3}
+  sentences:
+  - "Hmmm\u2026mmmm. Hmmm\u2026Mmm"
+  - Oh!
+  - 'Pardon me, I was absorbed in thought. '
+  - Discovering this dungeon for many years made me doubt the tale from many years
+    since.
+  - No one hath seen the crazy magician mentioned in the story since the day that
+    an old man emerged from this dungeon. How could we possibly beat something we 
+    hast ne'r seen ere?
+  - I wonder if that self-proclaimed king old man was telling the truth. About becoming
+    the lord of the golden kingdom if the magician is defeated
+  - Maybe tale is always tale
+  - Are thou going to hie down? oh, just forbear doing that! Thou shall stop conquering
+    this dungeon just like me
+  - Where is thy little mage sister? I see her always around thou.
+  - Stuck in that pit? Oh dear! That is really unfortune.
+  - That creature hath stopped many adventures to go further, once  they  face  it, 
+    they hardly survive
+  - "Yet  we canst not die in this dungeon right ? Haaa\u2026 Haaaa\u2026 haaaa"
+  - Oh sorry, mine bad.  Thou should'st hurry up and looking for her.  Ere she is
+    digested
+  - "But be careful for yourself you don\u2019t want die before save her right?"

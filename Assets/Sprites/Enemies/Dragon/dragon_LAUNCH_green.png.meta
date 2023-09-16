@@ -1,0 +1,328 @@
+fileFormatVersion: 2
+guid: 8693ffaa655097e488711fabd42085c3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 3
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dragon_LAUNCH_6
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97200f1086b99f4790ce1eecb152f47
+      internalID: -1702833479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_7
+      rect:
+        serializedVersion: 2
+        x: 2144
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0bbe8c732597fb41901d1fa75f3e11f
+      internalID: -1069620886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_8
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c8e6edcf6cdca04cbbc7b98914e0109
+      internalID: -1734626812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_5
+      rect:
+        serializedVersion: 2
+        x: 1952
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6afb913fbec3ddf40adf230a6d2d5e23
+      internalID: -1379927749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_4
+      rect:
+        serializedVersion: 2
+        x: 1853
+        y: 33
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572dfdf5aac727849bc181b7ad6aa1dc
+      internalID: -1897091532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_3
+      rect:
+        serializedVersion: 2
+        x: 1756
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1e1462c5a52ea647b55cc8bf7a659f1
+      internalID: -540661517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_2
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5e5beb94a27b8d41b8afec9cc7cd630
+      internalID: 1138058895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dragon_LAUNCH_1
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 32
+        width: 45
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd309138231f8747b2702f9ddd30eb3
+      internalID: -744787051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dragon_LAUNCH_1: -744787051
+      dragon_LAUNCH_2: 1138058895
+      dragon_LAUNCH_3: -540661517
+      dragon_LAUNCH_4: -1897091532
+      dragon_LAUNCH_5: -1379927749
+      dragon_LAUNCH_6: -1702833479
+      dragon_LAUNCH_7: -1069620886
+      dragon_LAUNCH_8: -1734626812
+      dragon_LAUNCH_green_0: 1361615774
+      dragon_LAUNCH_green_10: 442302876
+      dragon_LAUNCH_green_11: -309165938
+      dragon_LAUNCH_green_12: 78173375
+      dragon_LAUNCH_green_13: -679452810
+      dragon_LAUNCH_green_14: 1924418932
+      dragon_LAUNCH_green_15: 844067049
+      dragon_LAUNCH_green_2: -411179459
+      dragon_LAUNCH_green_24: 1378019785
+      dragon_LAUNCH_green_25: -1128916300
+      dragon_LAUNCH_green_26: -480402059
+      dragon_LAUNCH_green_27: 1609786780
+      dragon_LAUNCH_green_28: -1637122913
+      dragon_LAUNCH_green_29: -626018733
+      dragon_LAUNCH_green_3: 2046070322
+      dragon_LAUNCH_green_30: -2025282315
+      dragon_LAUNCH_green_31: 622770472
+      dragon_LAUNCH_green_32: 1286209637
+      dragon_LAUNCH_green_33: -2051821211
+      dragon_LAUNCH_green_35: 2015582942
+      dragon_LAUNCH_green_36: -1175084444
+      dragon_LAUNCH_green_37: 648365154
+      dragon_LAUNCH_green_38: 88298612
+      dragon_LAUNCH_green_4: 945606296
+      dragon_LAUNCH_green_5: 2009651749
+      dragon_LAUNCH_green_6: -765689662
+      dragon_LAUNCH_green_7: -1959323008
+      dragon_LAUNCH_green_8: -1276448239
+      dragon_LAUNCH_green_9: -958939103
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
