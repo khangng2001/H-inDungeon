@@ -10,12 +10,18 @@ public class DialogueTrigger : MonoBehaviour
 
     [SerializeField] private List<RecipeSO> recipePapers;
 
+    [SerializeField] private GameObject player;
+
+    [SerializeField] private NPCController NPCController;
+
     private bool playerInRange;
 
     private void Awake()
     {
         playerInRange = false;
         cue.SetActive(false);
+
+        NPCController = GetComponentInParent<NPCController>();
     }
 
     private void Update()
@@ -39,13 +45,20 @@ public class DialogueTrigger : MonoBehaviour
         }
     }
 
- 
+    public GameObject GetPlayer()
+    {
+        return player;
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             playerInRange = true;
+
+            player = collision.gameObject;
+
+            NPCController.enabled = true;
         }
     }
 

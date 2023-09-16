@@ -3679,10 +3679,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8524018847462247062, guid: 93bf7388255aaf14da67b492a0be5ac3, type: 3}
-      propertyPath: recipePapers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8524018847529040722, guid: 93bf7388255aaf14da67b492a0be5ac3, type: 3}
       propertyPath: m_RootOrder
       value: 9

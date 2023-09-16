@@ -257,6 +257,11 @@ public class PlayerController : MonoBehaviour, IDataPersistence
             BloodOut();
         }else if(collision.CompareTag("Checkpoint"))
         {
+            if (collision.gameObject.name.Equals("Campfire"))
+            {
+                collision.gameObject.GetComponent<DetectAndSave>().SetSaved(true);
+            }
+
             hasTouchedCheckpoint = true;
             oldCheckPointIndex = GameManager.instance.GetSceneIndex();
             checkPoint = collision.gameObject.GetComponent<Transform>().transform.position;

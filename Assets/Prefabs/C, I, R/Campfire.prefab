@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4661795109747128026
 Transform:
   m_ObjectHideFlags: 0
@@ -296,6 +296,7 @@ GameObject:
   - component: {fileID: 5341397942411778056}
   - component: {fileID: 8805158734801349875}
   - component: {fileID: 5341397942411778052}
+  - component: {fileID: 1663538228408470351}
   m_Layer: 0
   m_Name: Campfire
   m_TagString: Checkpoint
@@ -387,7 +388,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 1841077790, guid: 75831c88d335ce544b319d69a4f9c77a, type: 3}
+  m_Sprite: {fileID: -1303503515, guid: cc29ac591d57cce4691cdb0b324e04f9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -581,3 +582,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2048
   radiusCheck: 1
+--- !u!114 &1663538228408470351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5341397942411778059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76b8c660dc8ac79408079ac48a1c5d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 0}
+  animator: {fileID: 0}
+  saved: 0

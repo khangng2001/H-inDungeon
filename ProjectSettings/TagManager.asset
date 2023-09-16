@@ -13,6 +13,7 @@ TagManager:
   - Portal
   - Entrance
   - Checkpoint
+  - PortalLevel1
   layers:
   - Default
   - TransparentFX
@@ -55,4 +56,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 2490275629
+    locked: 0
+  - name: Character
+    uniqueID: 604800081
     locked: 0
