@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemList:
-  - {fileID: 4179150854586636519, guid: 954d4d617c43d214c8663e808d192209, type: 3}
+  - {fileID: 4179150854586636519, guid: ec598e9114d04b4409db6eb5689d6f28, type: 3}
   spawnChance: 0.5
 --- !u!1 &7689075225206042872
 GameObject:

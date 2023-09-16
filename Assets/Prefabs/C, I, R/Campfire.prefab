@@ -560,7 +560,7 @@ MonoBehaviour:
   - onionegguncookedbeef
   - onionuncookedbeefegg
   - uncookedbeefeggonion
-  - uncookedbeefeggonion
+  - uncookedbeefonionegg
   recipeResults:
   - {fileID: 11400000, guid: 41ef95938417e3847a46c40265834742, type: 2}
   - {fileID: 11400000, guid: 41ef95938417e3847a46c40265834742, type: 2}
@@ -571,12 +571,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3795c5134c789bd4b8c350c989a8f737, type: 2}
   - {fileID: 11400000, guid: 3795c5134c789bd4b8c350c989a8f737, type: 2}
   - {fileID: 11400000, guid: 3795c5134c789bd4b8c350c989a8f737, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
-  - {fileID: 11400000, guid: 551ee212f153feb44ab9f01e4f15ead2, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
+  - {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
   inventoryItemPrefab: {fileID: 1501300417021963823, guid: ba2015c2943fb4747914db4a2d191434, type: 3}
   playerMask:
     serializedVersion: 2

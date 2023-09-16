@@ -29,7 +29,7 @@ public class DataPersistence : MonoBehaviour
                 Debug.LogError("Found more than one Data Persistence Manager in the scene. Destroying the newest one.");
                 Destroy(this.gameObject);
                 return;
-            } 
+            }
             instance = this;
             DontDestroyOnLoad(this.gameObject);
         }
@@ -53,13 +53,7 @@ public class DataPersistence : MonoBehaviour
 
     public async void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log("OnSceneLoaded Called");
-        User user = GameObject.FindObjectOfType<ConnectMongoDb>().GetComponent<ConnectMongoDb>().user;
-        var mongoDbClient = user.GetMongoClient("mongodb-atlas");
-        var database = mongoDbClient.GetDatabase("HungryInDungeon");
-        collection = database.GetCollection<GameData>("Player");
-
-        pid = await FindPlayerPid(user.Id);
+        pid = await GetPid();
         Debug.Log("pid: " + pid);
 
         this.dataHandler = new CloudDataHandler(collection);
@@ -77,13 +71,13 @@ public class DataPersistence : MonoBehaviour
     {
         try
         {
-            GameData myAccount = await collection.FindOneAsync(new {pid = findPid});
+            GameData myAccount = await collection.FindOneAsync(new { pid = findPid });
             return myAccount.Pid;
         }
         catch (AppException ex)
         {
             Debug.LogException(ex);
-            return null;  
+            return null;
         }
     }
 
@@ -121,7 +115,6 @@ public class DataPersistence : MonoBehaviour
         {
             Debug.LogException(ex);
         }
-
     }
 
     public async void SaveGame()
@@ -137,6 +130,24 @@ public class DataPersistence : MonoBehaviour
         // Save that data to a player in mongodb  
         dataHandler.Save(myAccount, myAccount.Pid);
         Debug.Log("Save success");
+    }
+
+    public async Task<string> GetPid()
+    {
+        User user = GameObject.FindObjectOfType<ConnectMongoDb>().GetComponent<ConnectMongoDb>().user;
+        var mongoDbClient = user.GetMongoClient("mongodb-atlas");
+        var database = mongoDbClient.GetDatabase("HungryInDungeon");
+        collection = database.GetCollection<GameData>("Player");
+
+        pid = await FindPlayerPid(user.Id);
+
+        return pid;
+    }
+
+    public async Task<bool> HasGameData(string pid)
+    {
+        GameData myAccount = await collection.FindOneAsync(new { pid = pid });
+        return myAccount.Scene == 0;
     }
 
     private List<IDataPersistence> FindAllDataPersistenceObjects()
