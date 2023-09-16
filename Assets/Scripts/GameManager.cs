@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     private void PlayBackgroundMusic()
     {
-        /*if (SceneManager.GetActiveScene().name == "Scene_01")
+        if (SceneManager.GetActiveScene().name == "Scene_01")
         {
             AudioManager.Instance.PlayBackgroundMusic();
             AudioManager.Instance.StopDungeonMusic();
@@ -83,7 +83,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
         {
             AudioManager.Instance.StopBackgroundMusic();
             AudioManager.Instance.PlayDungeonMusic();
-        }*/
+        }
     }
     public void SaveDataInventory()
     {

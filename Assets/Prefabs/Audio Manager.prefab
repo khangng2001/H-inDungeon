@@ -42,8 +42,8 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: b662992a5377d754d9a90e0088db8eb3, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectSource: {fileID: 8610014969832311362}
   backgroundMusic: {fileID: 8610014970486370329}
-  dungeonMusic: {fileID: 0}
+  dungeonMusic: {fileID: 5463604973366864448}
   fightMusic: {fileID: 8610014969965567803}
 --- !u!1 &8610014969832311363
 GameObject:
@@ -222,7 +222,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6c1f652c6e3703c40bc7a6443c269fc6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1a1cc7aa4c027204fa341f1da3cebe89, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -350,7 +350,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eed72398d1d037840b87d6e88bf6ba09, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 457b9b8a8483ce64eab1f97aea2805ec, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -478,7 +478,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0bbc693d1c5a1f94ebd89d8f6ed5f2cd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 76a40d84ce7b1c94bbbe36f1bc28e86b, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
