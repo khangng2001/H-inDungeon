@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <RecipeImage>k__BackingField: {fileID: 21300000, guid: 9b323dc2d0fcf2541b579f867f17679a, type: 3}
   <Title>k__BackingField: Hotpot
-  <Benefit>k__BackingField: "Gain 5 Health, \n3 Stamina"
+  <Benefit>k__BackingField: "Gain 10 Health, \n3 Stamina"
   <Ingredient>k__BackingField: 'Ingredient
 
     Egg x1
