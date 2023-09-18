@@ -17,7 +17,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     private static int sceneIndex = 2;
     [SerializeField] public Vector3[] entrances;
     [SerializeField] private int currentIndexEntrance = 0;
-    
+
+    [SerializeField] private GameObject blackPanel;
     [SerializeField] private GameObject blackFade;
     [SerializeField] private GameObject panelPause;
 
@@ -35,8 +36,7 @@ public class GameManager : MonoBehaviour, IDataPersistence
 
     private void Awake()
     {
-        blackFade.GetComponent<Animator>().Play("FadeInLonger");
-
+        blackPanel.SetActive(true);
         if (instance != null)
         {
             Destroy(gameObject);
@@ -56,7 +56,6 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         Debug.Log("currentIndex: " + currentIndexEntrance);
         SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
     private void OnDisable()
@@ -184,6 +183,8 @@ public class GameManager : MonoBehaviour, IDataPersistence
     {
         sceneIndex = data.Scene;
         currentIndexEntrance = sceneIndex - 2;
+        blackPanel.SetActive(false);
+        blackFade.GetComponent<Animator>().Play("FadeIn");
     }
 
     public void SaveData(ref GameData data)

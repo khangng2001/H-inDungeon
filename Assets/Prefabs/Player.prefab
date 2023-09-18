@@ -686,6 +686,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c4256504e1bbb941bb80d51bacbecd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackPanel: {fileID: 0}
   fadeDie: {fileID: 0}
   maxHealth: 100
   healthBar: {fileID: 0}
