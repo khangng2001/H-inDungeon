@@ -35,6 +35,7 @@ public class TestSaveLoadInventory : MonoBehaviour, IDataPersistence
         {
             for (int i = 0; i < data.RecipeListCount; i++)
             {
+                GameManager.instance.recipes.Add(recipes[i]);
                 RecipeManager.instance.AddRecipe(recipes[i]);
             }
         }
