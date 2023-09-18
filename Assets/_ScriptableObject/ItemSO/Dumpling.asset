@@ -16,5 +16,5 @@ MonoBehaviour:
   stackable: 1
   image: {fileID: 21300000, guid: b96ccc76068ac9f45b4bbfbd65f2ef70, type: 3}
   id: dumpling
-  health: 5
+  health: 7
   stamina: 0

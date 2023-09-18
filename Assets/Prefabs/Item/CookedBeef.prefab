@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3183257620995517349}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.29, z: 0}
-  m_LocalScale: {x: 6, y: 6, z: 1}
+  m_LocalPosition: {x: 0, y: 1.4, z: 0}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5344976723871895367}
@@ -112,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 4617297448524556584}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 12.19, y: -9.48, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1712855319114607350}
@@ -160,12 +160,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d154ed9b00731684c942a377c753d236, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8d74461f26e326d498c5e37aa2e46efb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.1, y: 3.3}
+  m_Size: {x: 5.01, y: 4.98}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -184,18 +184,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0008189678, y: 0.0013947487}
+  m_Offset: {x: -0.04642105, y: -0.31621593}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 15.65625, y: 15.5625}
-    newSize: {x: 3.1, y: 3.3}
+    oldSize: {x: 5.01, y: 4.98}
+    newSize: {x: 5.01, y: 4.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30211496, y: 0.29795647}
+  m_Size: {x: 3.262764, y: 1.7630206}
   m_EdgeRadius: 0
 --- !u!114 &5264581494997585452
 MonoBehaviour:
@@ -209,5 +209,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5541b6ce696138a47aa1eb4367bdd731, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: d17d11e87bda5b6468f6e8ff5341cff8, type: 2}
+  item: {fileID: 11400000, guid: 38445de6b50714e469b7279eb0f61992, type: 2}
   ui: {fileID: 3183257620995517349}
