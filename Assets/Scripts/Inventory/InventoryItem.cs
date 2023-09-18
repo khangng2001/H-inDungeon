@@ -46,11 +46,17 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = Input.mousePosition;
+
+        //Show DropItemUI
+        DropItemZone.instance.Show();
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         image.raycastTarget = true;
         transform.SetParent(parentAfterDrag);
+
+        //Hide DropItemUI
+        DropItemZone.instance.Hide();
     }
 }
