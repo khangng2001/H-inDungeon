@@ -30,6 +30,7 @@ public class DialogueManager : MonoBehaviour
     public bool isDialoguePlaying { get; private set; }
 
     public static DialogueManager instance { get; private set; }
+
     private void Awake()
     {
         if (instance != null)
@@ -56,6 +57,10 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isDialoguePlaying)
         {
+            if (Input.GetKeyDown(KeyCode.Tab))
+            {
+                notification.SetActive(false);
+            }
             return;
         }
 
@@ -71,12 +76,6 @@ public class DialogueManager : MonoBehaviour
                 wordSpeed = 0.001f;
             }
         }
-
-        //if (index == sentences.Length - 1 && dialogueType == "Choise")
-        //{
-        //    choise.SetActive(true);
-        //    isDialoguePlaying = false;
-        //}
     }
     public void TakeRecipe(RecipeSO recipeSOs)
     {
@@ -157,10 +156,5 @@ public class DialogueManager : MonoBehaviour
     public void OnClickChoise1()
     {
         ExitDialogueMode();
-    }
-
-    public void OnOKButton()
-    {
-        notification.SetActive(false);
     }
 }
