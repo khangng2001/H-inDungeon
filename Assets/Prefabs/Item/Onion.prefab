@@ -211,3 +211,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: 5b36aa1bac3c7c6499c548f42b3986a3, type: 2}
   ui: {fileID: 3183257620995517349}
+  pickupItemSound: {fileID: 8300000, guid: 53783de7da1486f41a8d42f68bf12983, type: 3}

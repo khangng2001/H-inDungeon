@@ -18,6 +18,7 @@ public class InventoryManager : MonoBehaviour
 
     [Header("Sound")]
     [SerializeField] private AudioClip eatingSound;
+    [SerializeField] private AudioClip dropItemSound;
 
     private void Awake()
     {
@@ -154,7 +155,6 @@ public class InventoryManager : MonoBehaviour
             Destroy(item.gameObject);
         }
     }
-
     public void DropItemOnGround(InventoryItem item)
     {
         for (int i = 0; i < itemPrefab.Count; i++)
@@ -165,6 +165,7 @@ public class InventoryManager : MonoBehaviour
                 Instantiate(itemPrefab[i], PlayerController.instance.gameObject.transform.position, Quaternion.identity);
             }
         }
+        AudioManager.Instance.PlaySoundEffect(dropItemSound);
     }
 
     //Add Item when Load game
