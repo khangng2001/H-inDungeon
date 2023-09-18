@@ -48,6 +48,9 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     [SerializeField] private Vector3 currentCheckPoint;
     [SerializeField] private int oldCheckPointIndex;
 
+    private Transform transformDragon;
+    private bool isRepel = false;
+
     private void Awake()
     {
         if (instance != null)
@@ -112,6 +115,11 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         }
 
         IncreaseStaminaByTime();
+
+        if (isRepel)
+        {
+            Repel();
+        }
     }
 
     void LifeController()
@@ -249,13 +257,42 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         Instantiate(bloodObject, transform.position, Quaternion.identity);
     }
 
+    private void Repel() // BI DAY LUI 
+    {
+        transform.position = Vector2.MoveTowards(transform.position, transformDragon.position, -5f * Time.deltaTime);
+    }
+
+    IEnumerator TimeRepel()
+    {
+        yield return new WaitForSeconds(1f);
+
+        isRepel = false;
+
+        playerInput.enabled = true;
+    }
+
+    // KHI PLAYER BI DAY LUI VA CO VA CHAM THI KHONG DAY LUI NUA
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isRepel = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("EnemyAttackRange"))
         {
             DecreaseHealth(collision.gameObject.GetComponentInParent<EnemyHandle>().GetStrength());
             BloodOut();
-        }else if(collision.CompareTag("Checkpoint"))
+
+            if (collision.transform.parent.gameObject.name.Equals("Dragon"))
+            {
+                transformDragon = collision.transform.parent.gameObject.transform;
+                isRepel = true;
+                playerInput.enabled = false;
+                StartCoroutine(TimeRepel());
+            }
+        }
+        else if(collision.CompareTag("Checkpoint"))
         {
             if (collision.gameObject.name.Equals("Campfire"))
             {
