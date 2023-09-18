@@ -48,6 +48,15 @@ public class GameManager : MonoBehaviour, IDataPersistence
         }
     }
 
+    private void Start()
+    {
+        if (DataPersistence.instance.isNewGame)
+        {
+            blackPanel.SetActive(false);
+            blackFade.GetComponent<Animator>().Play("FadeIn");
+        }
+    }
+
     private void Update()
     {
     }

@@ -12,6 +12,7 @@ public class DataPersistence : MonoBehaviour
     MongoClient.Collection<GameData> collection;
 
     private string pid;
+    public bool isNewGame;
 
     private CloudDataHandler dataHandler;
     private List<IDataPersistence> dataPersistencesObjects;
@@ -32,6 +33,8 @@ public class DataPersistence : MonoBehaviour
             }
             instance = this;
             DontDestroyOnLoad(this.gameObject);
+
+            isNewGame = false;
         }
         catch (AppException ex)
         {
@@ -81,11 +84,12 @@ public class DataPersistence : MonoBehaviour
         }
     }
 
-    public async void NewGame()
+    public void NewGame()
     {
-        GameData myAccount = await collection.FindOneAsync(new { pid = pid });
-        // Create new data for game
-        myAccount = new GameData();
+        isNewGame = true;
+        //GameData myAccount = await collection.FindOneAsync(new { pid = pid });
+        //// Create new data for game
+        //myAccount = new GameData();
     }
 
     public async void Continue()
