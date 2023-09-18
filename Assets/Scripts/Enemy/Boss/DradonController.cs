@@ -15,6 +15,7 @@ namespace Enemy.Boss
         private Intro intro;
         private Ending ending;
         private float speed;
+        private bool isAttacking;
 
         [SerializeField] private float timeOfFireRain;
 
@@ -64,10 +65,10 @@ namespace Enemy.Boss
                     MoveToPlayer();
                     break;
                 case States.Melee:
-                    animator.Play("Attack");
+                    Melee();
                     break;
                 case States.Stomping:
-                    animator.Play("Stomping");
+                    Stomping();
                     break;
                 case States.Hover:
                     break;
@@ -113,7 +114,7 @@ namespace Enemy.Boss
             isFlyDownAfter = false;
             isTakeDamage = false;
             isBeforeDestroy = false;
-
+            isAttacking = false;
         }
 
         private void Update()
@@ -124,7 +125,7 @@ namespace Enemy.Boss
 
             UpdateState(changeState);
             FlipX();
-        
+
             // SET UP
             speed = enemyHandle.GetSpeed();
             //
@@ -154,7 +155,7 @@ namespace Enemy.Boss
                         {
                             changeState = States.CallFireRain;
                         }
-                        else if (rangeDetectAttack.GetIsDetectAttack())
+                        else if (rangeDetectAttack.GetIsDetectAttack() || isAttacking)
                         {
                             if (fireRain)
                             {
@@ -385,5 +386,72 @@ namespace Enemy.Boss
 
             ending.SetIsBacking(true);
         }
+
+        // ATTACK
+        private void Melee()
+        {
+            if (!isAttackOneTime)
+            {
+                isAttacking = true;
+                isAttackOneTime = true;
+
+                animator.Play("Attack");
+
+                StartCoroutine(AttackOneTime());
+            }
+        }
+
+        private bool isAttackOneTime = false;
+        IEnumerator AttackOneTime()
+        {
+            yield return new WaitForSeconds(0.8f);
+
+            animator.Play("Idle");
+
+            isAttacking = false;
+
+            StartCoroutine(AfterAttack());
+        }
+
+        IEnumerator AfterAttack()
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            isAttackOneTime = false;
+        }
+
+
+        private void Stomping()
+        {
+            if (!isStompOneTime)
+            {
+                isAttacking = true;
+                isStompOneTime = true;
+
+                animator.Play("Stomping");
+
+                StartCoroutine(StompOneTime());
+            }
+        }
+
+        private bool isStompOneTime = false;
+        IEnumerator StompOneTime()
+        {
+            yield return new WaitForSeconds(1f);
+
+            animator.Play("Idle");
+
+            isAttacking = false;
+
+            StartCoroutine(AfterStomping());
+        }
+
+        IEnumerator AfterStomping()
+        {
+            yield return new WaitForSeconds(0.5f);
+
+            isStompOneTime = false;
+        }
+        //
     }
 }
