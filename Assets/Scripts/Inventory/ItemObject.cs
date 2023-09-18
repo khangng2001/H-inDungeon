@@ -7,6 +7,9 @@ public class ItemObject : MonoBehaviour
 
     private bool check;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip pickupItemSound;
+
     private void Awake()
     {
         ui.SetActive(false);
@@ -17,11 +20,6 @@ public class ItemObject : MonoBehaviour
         return item; 
     }
 
-    public ItemObject GetItemObject()
-    {
-        return this;
-    }
-
     private void Update()
     {
         if (check)
@@ -30,6 +28,7 @@ public class ItemObject : MonoBehaviour
             {
                 InventoryManager.instance.AddItem(item);
                 Destroy(this.gameObject);
+                AudioManager.Instance.PlaySoundEffect(pickupItemSound);
             }
         }
     }

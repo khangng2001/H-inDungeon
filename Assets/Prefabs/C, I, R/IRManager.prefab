@@ -146,3 +146,4 @@ MonoBehaviour:
   - {fileID: 4617297448524556584, guid: a02e30fc949c70f48bce373ffda2325e, type: 3}
   maxHealth: 100
   eatingSound: {fileID: 8300000, guid: a9e962f6bd590d94a9d61951bddd5941, type: 3}
+  dropItemSound: {fileID: 8300000, guid: 78ada70edf80fef4fa6d7666d3f6cfa9, type: 3}
