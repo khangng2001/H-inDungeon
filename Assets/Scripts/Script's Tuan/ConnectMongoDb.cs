@@ -1,5 +1,6 @@
 using Realms.Sync;
 using Realms.Sync.Exceptions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -29,15 +30,36 @@ public class ConnectMongoDb : MonoBehaviour
     {
         Login,
         Register,
-        Loading
+        Loading,
+        Notification
     }
 
     private SceneStatus currentStatus;
 
     //-------------------------------------------------------------------------------------------------------------------
 
-    private void SwitchStateSceneStatus(SceneStatus newStatus)
+    private void SwitchStateSceneStatus(SceneStatus newStatus, string message = "")
     {
+        switch (currentStatus)
+        {
+            case SceneStatus.Notification:
+                {
+                    notificationUI.SetActive(false);
+                    break;
+                }
+            default: { break; }
+        }
+
+        switch (newStatus)
+        {
+            case SceneStatus.Notification:
+                {
+                    textNotification.text = message;
+                    notificationUI.SetActive(true);
+                    break;
+                }
+            default: { break; }
+        }
         currentStatus = newStatus;
         UpdateUI();
     }
@@ -70,6 +92,10 @@ public class ConnectMongoDb : MonoBehaviour
                     notificationUI.SetActive(false);
                     break;
                 }
+            case SceneStatus.Notification:
+                {
+                    break;
+                }
         }
     }
 
@@ -78,47 +104,54 @@ public class ConnectMongoDb : MonoBehaviour
         string name = nameRegisterField.text;
         string pass = passRegisterField.text;
 
-        if (pass != confirmRegisterField.text)
+        //if (pass != confirmRegisterField.text)
+        //{
+        //    SwitchStateSceneStatus(SceneStatus.Notification, "Pass doesn't match.");
+        //}
+        //else
+        //{
+        try
         {
-            notificationUI.SetActive(true);
-            textNotification.text = "Pass doesn't match.";
+            if (pass != confirmRegisterField.text)
+            {
+                throw new ArgumentException("Pass does not match.");
+            }
+            SwitchStateSceneStatus(SceneStatus.Loading);
+            await app.EmailPasswordAuth.RegisterUserAsync(name, pass);
+            SwitchStateSceneStatus(SceneStatus.Login);
         }
-        else
+        catch (ArgumentException ex)
         {
-            try
-            {
-                SwitchStateSceneStatus(SceneStatus.Loading);
-                await app.EmailPasswordAuth.RegisterUserAsync(name, pass);
-                SwitchStateSceneStatus(SceneStatus.Login);
-            }
-            catch (AppException ex)
-            {
-                notificationUI.SetActive(true);
-                textNotification.text = ex.Message;
-            }
+            SwitchStateSceneStatus(SceneStatus.Notification, ex.Message);
         }
+        //}
     }
 
     public async void OnSubmitLogin()
     {
         try
         {
-            SwitchStateSceneStatus(SceneStatus.Loading);
-            user = await app.LogInAsync(Credentials.EmailPassword(nameLoginField.text, passLoginField.text));
-            SwitchStateSceneStatus(SceneStatus.Login);
-            Debug.Log("User.Id: " + user.Id);
-            SceneManager.LoadScene(1);
+            try
+            {
+                SwitchStateSceneStatus(SceneStatus.Loading);
+                user = await app.LogInAsync(Credentials.EmailPassword(nameLoginField.text, passLoginField.text));
+                SwitchStateSceneStatus(SceneStatus.Login);
+                Debug.Log("User.Id: " + user.Id);
+                SceneManager.LoadScene(1);
+            }
+            catch (AppException ex)
+            {
+                SwitchStateSceneStatus(SceneStatus.Notification, ex.Message);
+            }
         }
-        catch (AppException ex)
+        catch (ArgumentException ex)
         {
-            notificationUI.SetActive(true);
-            textNotification.text = ex.Message;
+            SwitchStateSceneStatus(SceneStatus.Notification, ex.Message);
         }
     }
 
     public void OffNotification()
     {
-        notificationUI.SetActive(false);
         SwitchStateSceneStatus(SceneStatus.Login);
     }
     
