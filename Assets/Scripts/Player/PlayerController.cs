@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     }
 
-    public void ResetPlayer()
+    public async void ResetPlayer()
     {
         
 
@@ -174,6 +174,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         //transform.position = currentCheckPoint;
         AudioManager.Instance.StopFightMusic();
         SceneManager.LoadScene(oldCheckPointIndex);
+        string pid = await DataPersistence.instance.GetPid();
         transform.position = checkPoint;
 
         //if (hasTouchedCheckpoint)
@@ -205,6 +206,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         // DI CHUYEN LAI BINH THUONG
         canMove = true;
     }
+
 
     public void SetCurrentCheckPoint (Vector3 newCheckPoint)
     {
