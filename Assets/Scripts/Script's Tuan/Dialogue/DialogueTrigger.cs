@@ -33,7 +33,22 @@ public class DialogueTrigger : MonoBehaviour
             {
                 if (recipePapers[0] != null)
                 {
-                    DialogueManager.instance.TakeRecipe(recipePapers[0]);
+                    bool check = false;
+                    for (int i = 0; i < RecipeManager.instance.listOfPaperUI.Count; i++)
+                    {
+                        if (recipePapers[0] == RecipeManager.instance.listOfPaperUI[i].recipeSO) //the player already had this recipe
+                        {
+                            check = true;
+                            Debug.Log("loop: " + check);
+                            //return;
+                        }
+                    }
+                    if (check == false)
+                    {
+                        DialogueManager.instance.TakeRecipe(recipePapers[0]);
+                        recipePapers[0] = null;
+                    }
+                    Debug.Log(check);
                     recipePapers[0] = null;
                 }
                 DialogueManager.instance.EnterDialogueMode(dialogue);
