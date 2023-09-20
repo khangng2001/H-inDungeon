@@ -116,9 +116,16 @@ public class ConnectMongoDb : MonoBehaviour
             {
                 throw new ArgumentException("Pass does not match.");
             }
-            SwitchStateSceneStatus(SceneStatus.Loading);
-            await app.EmailPasswordAuth.RegisterUserAsync(name, pass);
-            SwitchStateSceneStatus(SceneStatus.Login);
+            try
+            {
+                SwitchStateSceneStatus(SceneStatus.Loading);
+                await app.EmailPasswordAuth.RegisterUserAsync(name, pass);
+                SwitchStateSceneStatus(SceneStatus.Login);
+            }
+            catch (AppException ex)
+            {
+                SwitchStateSceneStatus(SceneStatus.Notification, ex.Message);
+            }
         }
         catch (ArgumentException ex)
         {

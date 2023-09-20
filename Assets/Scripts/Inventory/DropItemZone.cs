@@ -7,8 +7,8 @@ public class DropItemZone : MonoBehaviour, IDropHandler
 
     private void Awake()
     {
-        Hide();
         instance = this;
+        Hide();
     }
 
     public void Show()

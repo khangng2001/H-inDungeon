@@ -68,8 +68,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Hotpot
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7daa4d036c66d2d4f9c3f2b521e26339, type: 2}
+  m_sharedMaterial: {fileID: 7029521846021155705, guid: 7daa4d036c66d2d4f9c3f2b521e26339, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
