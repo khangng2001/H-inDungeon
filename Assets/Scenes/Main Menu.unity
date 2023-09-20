@@ -310,9 +310,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1521046073}
-        m_TargetAssemblyTypeName: IntroStartGame, Assembly-CSharp
-        m_MethodName: LogOut
+      - m_Target: {fileID: 1459635195}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: OnExitGameClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -840,7 +840,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Log Out
+  m_text: 'Exit
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e636d2492a8d0a540b3ee2d191d9e9cc, type: 2}
   m_sharedMaterial: {fileID: -5567841798110464740, guid: e636d2492a8d0a540b3ee2d191d9e9cc, type: 2}
@@ -1365,7 +1367,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1277405292
 RectTransform:
   m_ObjectHideFlags: 0

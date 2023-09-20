@@ -406,8 +406,6 @@ namespace Enemy.Boss
         {
             yield return new WaitForSeconds(0.8f);
 
-            animator.Play("Idle");
-
             isAttacking = false;
 
             StartCoroutine(AfterAttack());
@@ -438,8 +436,6 @@ namespace Enemy.Boss
         IEnumerator StompOneTime()
         {
             yield return new WaitForSeconds(1f);
-
-            animator.Play("Idle");
 
             isAttacking = false;
 
