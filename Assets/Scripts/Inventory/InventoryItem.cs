@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using TMPro;
 
-public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("UI")]
     public Image image;
@@ -12,6 +12,14 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [HideInInspector] public ItemSO item;
     [HideInInspector] public int count = 1;
     [HideInInspector] public Transform parentAfterDrag; //to make sure the itemUI always on top
+
+    [SerializeField] private ItemNameUI itemNameUI;
+    [SerializeField] private TextMeshProUGUI itemName;
+
+    void Start()
+    {
+        itemNameUI.Hide();
+    }
 
     public void SwapItem(ItemSO swapitem, int swapitemcount)
     {
@@ -58,5 +66,16 @@ public class InventoryItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
 
         //Hide DropItemUI
         DropItemZone.instance.Hide();
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        itemName.text = item.id.ToString();
+        itemNameUI.Show();
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        itemNameUI.Hide();
     }
 }
