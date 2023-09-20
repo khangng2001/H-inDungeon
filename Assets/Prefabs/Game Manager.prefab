@@ -2542,7 +2542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 138.71, y: -71.7}
+  m_AnchoredPosition: {x: 138.70999, y: -71.7}
   m_SizeDelta: {x: 259.23, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &76969957705919837
@@ -2954,7 +2954,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 440.07556, y: 8.429064}
+  m_AnchoredPosition: {x: 440, y: 8.5}
   m_SizeDelta: {x: 61.8878, y: 49.1837}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &881121651010883998
@@ -3245,7 +3245,7 @@ MonoBehaviour:
   - {x: -16.68, y: 21.24, z: 0}
   - {x: -24.86, y: 26.28, z: 0}
   - {x: -7.39, y: -15.51, z: 0}
-  - {x: 107.44, y: -29.13, z: 0}
+  - {x: 71.1, y: -18.8, z: 0}
   - {x: 41.8, y: -0.29, z: 0}
   currentIndexEntrance: 0
   blackPanel: {fileID: 5632735516704269033}

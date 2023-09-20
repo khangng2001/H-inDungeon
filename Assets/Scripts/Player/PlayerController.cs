@@ -135,14 +135,15 @@ public class PlayerController : MonoBehaviour, IDataPersistence
             playerInput.enabled = false;
             //playerController.enabled = false;
             transform.GetChild(1).gameObject.SetActive(false); // LIGHT 2D (Tat den cua Ngo Tat To)
-
+            isRepel = false;
+            
             if (!isFadeOut)
             {
                 isFadeOut = true;
 
                 // KHONG THE DI CHUYEN NUA
                 canMove = false;
-
+                
                 fadeDie.GetComponent<Animator>().Play("FadeOut");
 
                 fadeDie.transform.parent.gameObject.GetComponent<Canvas>().sortingOrder = 200;

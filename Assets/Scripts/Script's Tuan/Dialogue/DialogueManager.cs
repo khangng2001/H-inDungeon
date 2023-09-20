@@ -73,6 +73,7 @@ public class DialogueManager : MonoBehaviour
             }
             else
             {
+                Debug.Log("wordSpeed: " + wordSpeed);
                 wordSpeed = 0.001f;
             }
         }

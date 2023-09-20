@@ -3093,6 +3093,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1308300277 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1635586050, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
+  m_PrefabInstance: {fileID: 2147039193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1332048510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3459,6 +3464,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 124776865}
     - target: {fileID: 7548341230766466112, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
+      propertyPath: fadeDie
+      value: 
+      objectReference: {fileID: 1308300277}
+    - target: {fileID: 7548341230766466112, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 2147039197}
@@ -3528,6 +3537,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
+--- !u!114 &1736996566 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7548341230566593108, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
+  m_PrefabInstance: {fileID: 1736996565}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e1454fedf81d442aea65893aefeb5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1814562430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7869,7 +7889,7 @@ PrefabInstance:
     - target: {fileID: 76969958170829538, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
       propertyPath: swordController
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1736996566}
     - target: {fileID: 3398052150048399641, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
       propertyPath: m_RootOrder
       value: 7
