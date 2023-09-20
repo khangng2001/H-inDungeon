@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private float currentHealth = 0f;
     [SerializeField] private GameObject healthBar;
     [SerializeField] private TextMeshProUGUI textHealthBar;
+    [SerializeField] private GameObject arrow;
 
     // STAMINA PLAYER
     [SerializeField] private float maxStamina = 0f;
@@ -67,6 +68,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
 
     void Start()
     {
+        arrow.SetActive(false);
         animator = GetComponentInChildren<Animator>();
         playerInput = GetComponent<PlayerInput>();
         playerController = GetComponent<PlayerController>();
@@ -308,7 +310,16 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         {
             StartCoroutine(GameManager.instance.WaitOnLoad());
         }
+        else if (collision.CompareTag("DisplayArrow"))
+        {
+            arrow.SetActive(true);
+            Invoke("DisplayArrow", 10);
+        }
+    }
 
+    private void DisplayArrow()
+    {
+        arrow.SetActive(false);
     }
 
     // ================= HANDLE HEALTH ======================

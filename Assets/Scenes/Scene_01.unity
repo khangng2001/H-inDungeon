@@ -247,6 +247,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4098146150700895968, guid: 58dc104cd194ae44892e17487c8df81a, type: 3}
   m_PrefabInstance: {fileID: 91329850}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &124776865 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3079567216653520133, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
+  m_PrefabInstance: {fileID: 2147039193}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &125170128
 GameObject:
   m_ObjectHideFlags: 0
@@ -3179,6 +3184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: defa533a0cb4ed84c8ffeeb63b74c5c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isNewGame: 0
 --- !u!4 &1436039170
 Transform:
   m_ObjectHideFlags: 0
@@ -3448,6 +3454,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7548341230766466112, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 124776865}
     - target: {fileID: 7548341230766466112, guid: ccc7e0b7ef3dd31448a7f3fcc9b613a4, type: 3}
       propertyPath: healthBar
       value: 
@@ -7848,6 +7858,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 565416227}
+    - target: {fileID: 76969957705919839, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 138.70999
+      objectReference: {fileID: 0}
     - target: {fileID: 76969958170829469, guid: 22342aac1ae281443bf627aa8c560ccd, type: 3}
       propertyPath: m_RootOrder
       value: 3
