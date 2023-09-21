@@ -402,6 +402,7 @@ MonoBehaviour:
   textEAfter: {fileID: 563604201}
   key: {fileID: 218594282}
   player: {fileID: 0}
+  chestOpen: {fileID: 8300000, guid: 0b1ee4bfc76c80e4b9b349dc14dad776, type: 3}
 --- !u!50 &54115049
 Rigidbody2D:
   serializedVersion: 4

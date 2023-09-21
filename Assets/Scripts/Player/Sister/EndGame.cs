@@ -27,4 +27,9 @@ public class EndGame : MonoBehaviour
             panelEndGame.GetComponent<Animator>().Play("Ending");
         }
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }

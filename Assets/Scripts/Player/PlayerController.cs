@@ -52,6 +52,8 @@ public class PlayerController : MonoBehaviour, IDataPersistence
     private Transform transformDragon;
     private bool isRepel = false;
 
+    [SerializeField] private AudioClip isHurt;
+
     private void Awake()
     {
         if (instance != null)
@@ -288,6 +290,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         {
             DecreaseHealth(collision.gameObject.GetComponentInParent<EnemyHandle>().GetStrength());
             BloodOut();
+            AudioManager.Instance.PlaySoundEffect(isHurt);
 
             if (collision.transform.parent.gameObject.name.Equals("Dragon"))
             {

@@ -20,6 +20,7 @@ public class ChestController : MonoBehaviour
 
     [SerializeField] private GameObject player;
 
+    [SerializeField] private AudioClip chestOpen;
     private void Awake()
     {
         rangeOpen = GetComponentInChildren<RangeOpen>();
@@ -64,7 +65,6 @@ public class ChestController : MonoBehaviour
             {
                 PRESS_E_LAST = true;
                 textEAfter.SetActive(false);
-
                 // HANDLE KEY
                 key.SetActive(false);
 
@@ -76,6 +76,7 @@ public class ChestController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                AudioManager.Instance.PlaySoundEffect(chestOpen);
                 animator.Play("Open");
                 PRESS_E = true;
                 textEBefore.SetActive(false);

@@ -14,6 +14,7 @@ public class DoorController : MonoBehaviour
     [SerializeField] private GameObject colider;
 
     [SerializeField] private bool isOpened;
+    [SerializeField] private AudioClip doorOpen;
 
     private void Awake()
     {
@@ -59,6 +60,7 @@ public class DoorController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                AudioManager.Instance.PlaySoundEffect(doorOpen);
                 player.transform.GetChild(3).gameObject.SetActive(false);
 
                 animator.Play("Open");
