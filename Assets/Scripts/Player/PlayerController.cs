@@ -290,7 +290,7 @@ public class PlayerController : MonoBehaviour, IDataPersistence
         {
             DecreaseHealth(collision.gameObject.GetComponentInParent<EnemyHandle>().GetStrength());
             BloodOut();
-            AudioManager.Instance.PlaySoundEffect(isHurt);
+            PlayerGotDamage();
 
             if (collision.transform.parent.gameObject.name.Equals("Dragon"))
             {
@@ -321,6 +321,11 @@ public class PlayerController : MonoBehaviour, IDataPersistence
             arrow.SetActive(true);
             Invoke("DisplayArrow", 10);
         }
+    }
+
+    public void PlayerGotDamage()
+    {
+        AudioManager.Instance.PlaySoundEffect(isHurt);
     }
 
     private void DisplayArrow()

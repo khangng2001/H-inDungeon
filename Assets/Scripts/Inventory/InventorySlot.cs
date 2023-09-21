@@ -27,6 +27,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 inventoryInSlot.count = totalCount;
                 inventoryInSlot.RefreshCount();
                 Destroy(inventoryItemMouse.gameObject);
+                DropItemZone.instance.Hide();
             }
             else
             {
@@ -36,6 +37,7 @@ public class InventorySlot : MonoBehaviour, IDropHandler
                 inventoryItemMouse.parentAfterDrag = transform;  //the item on the mouse given in the slot
 
                 InventoryManager.instance.SwapItem(temp);
+                DropItemZone.instance.Hide();
             }
         }
     }

@@ -100,12 +100,10 @@ public class InventoryManager : MonoBehaviour
             InventoryItem itemInSlot = slot.GetComponentInChildren<InventoryItem>();
 
             //use if the selected item is food
-            if (itemInSlot.item.type == ItemType.Food)
+            if (itemInSlot != null)
             {
-
-                if (itemInSlot != null)
+                if (itemInSlot.item.type == ItemType.Food)
                 {
-
                     ItemSO item = itemInSlot.item;
                     if (use == true)
                     {

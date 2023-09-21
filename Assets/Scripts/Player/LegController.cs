@@ -6,6 +6,7 @@ public class LegController : MonoBehaviour
 {
     public bool fall = false;
     [SerializeField] private GameObject player;
+    
 
     private void Awake()
     {
@@ -49,6 +50,7 @@ public class LegController : MonoBehaviour
         {
             player.GetComponent<PlayerController>().DecreaseHealth(10f);
             player.GetComponent<PlayerController>().BloodOut();
+            PlayerController.instance.PlayerGotDamage();
         }
     }
 }
