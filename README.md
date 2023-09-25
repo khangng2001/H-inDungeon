@@ -6,4 +6,4 @@
 - Lê Minh Thư - Student1469143
 - Phạm Minh Tuấn - Student1454085
 
-  The demo video is: https://www.youtube.com/watch?v=xOzkLuTj0VM
+  The video demo is: https://www.youtube.com/watch?v=xOzkLuTj0VM
